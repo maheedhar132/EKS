@@ -4,7 +4,7 @@ metadata:
   name: devops-tools
   namespace: devops
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       tool-name: jenkins 
@@ -18,3 +18,4 @@ spec:
           image: jenkins:2.60.3
           ports:
             - containerPort: 8080
+          

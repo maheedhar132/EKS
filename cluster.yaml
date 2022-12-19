@@ -1,7 +1,7 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: Devops-Tools-Cluster
+  name: Devops-Tools
   region: ap-south-1
 
 vpc:
@@ -22,8 +22,8 @@ vpc:
 nodeGroups:
   - name: Devops-Tools-Workers
     instanceType: t2.medium
-    desiredCapacity: 2
+    desiredCapacity: 3
   - name: Devops-Tools-Workers-2
     instanceType: t2.medium
-    desiredCapacity: 1
+    desiredCapacity: 3
     privateNetworking: true
