@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    tool-name: nexus3
+    tool-name: nexus
   ports:
     - nodePort: 31420
       port: 8081
