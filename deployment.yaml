@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: devops-tools
-  namespace: default
+  namespace: devops
 spec:
   replicas: 2
   selector:
