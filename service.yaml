@@ -7,6 +7,6 @@ spec:
   selector:
     tool-name: jenkins
   ports:
-    - nodePort: 8080
+    - nodePort: 31429
       port: 8080
       targetPort: 8080
