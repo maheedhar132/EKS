@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-tools
+  name: devops-tools-nexus
   namespace: devops
 spec:
   replicas: 1
