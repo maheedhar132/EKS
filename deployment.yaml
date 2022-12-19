@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: jenkins
-          image: 373341467727.dkr.ecr.ap-south-1.amazonaws.com/devopscontainers:jenkins
+          image: jenkins:2.60.3
           ports:
             - containerPort: 8080
