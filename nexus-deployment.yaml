@@ -7,15 +7,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      tool-name: jenkins 
+      tool-name: nexus3 
   template:
     metadata:
       labels:
-        tool-name: jenkins
+        tool-name: nexus3
     spec:
       containers:
-        - name: jenkins
-          image: jenkins:2.60.3
+        - name: nexus3
+          image: sonatype/nexus3:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           

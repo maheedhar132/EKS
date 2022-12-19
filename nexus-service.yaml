@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-service
+  namespace: devops
+spec:
+  type: NodePort
+  selector:
+    tool-name: nexus3
+  ports:
+    - nodePort: 31420
+      port: 8081
+      targetPort: 8081
