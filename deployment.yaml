@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-tools
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      tool-name: jenkins 
+  template:
+    metadata:
+      labels:
+        tool-name: jenkins
+    spec:
+      containers:
+        - name: jenkins
+          image: 373341467727.dkr.ecr.ap-south-1.amazonaws.com/devopscontainers:jenkins
+          ports:
+            - containerPort: 8080
