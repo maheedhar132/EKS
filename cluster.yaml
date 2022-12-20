@@ -22,8 +22,8 @@ vpc:
 nodeGroups:
   - name: Devops-Tools-Workers
     instanceType: t2.medium
-    desiredCapacity: 3
+    desiredCapacity: 2
   - name: Devops-Tools-Workers-2
     instanceType: t2.medium
-    desiredCapacity: 3
+    desiredCapacity: 2
     privateNetworking: true
