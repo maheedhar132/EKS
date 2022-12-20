@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkins
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchLabels:
+          tool-name: jenkins
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+        - matchLabels:
+          tool-name: jenkins
+  containers:
+  - name: jenkins
+    image: jenkins:2.60.3
