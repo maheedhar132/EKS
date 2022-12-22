@@ -1,7 +1,7 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: Devops-Tools
+  name: Devops-Tools-Cluster
   region: ap-south-1
 
 vpc:
