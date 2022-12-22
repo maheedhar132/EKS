@@ -24,6 +24,7 @@ nodeGroups:
     labels: { role: jenkins }
     instanceType: t2.medium
     desiredCapacity: 1
+    privateNetworking: true
   - name: nexus-node-group
     labels: { role: nexus }
     instanceType: t2.medium
