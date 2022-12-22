@@ -5,20 +5,25 @@ metadata:
   region: ap-south-1
 
 vpc:
-  id: vpc-0fa9e4d986269b8b3
+  id: vpc-03e19fa33d6173b69
   cidr: "192.168.0.0/16"
   subnets:
     public:
       ap-south-1a:
-        id: subnet-03197965f36167fb6
+        id: subnet-0d647278b03bfe3c4
       ap-south-1b:
-        id: subnet-0d2ce523b4cbded7e
+        id: subnet-0a42285b27863b65b
+    private:
+      ap-south-1a:
+        id: subnet-0dc5ebba7e18e1b74
+      ap-south-1b:
+        id: subnet-033444637443f874d
 
 nodeGroups:
   - name: jenkins-node-group
     labels: { role: jenkins }
     instanceType: t2.medium
-    desiredCapacity: 1
+    desiredCapacity: 2
     privateNetworking: true
   - name: nexus-node-group
     labels: { role: nexus }
