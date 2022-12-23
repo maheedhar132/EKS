@@ -29,11 +29,11 @@ nodeGroups:
     instanceType: t2.medium
     desiredCapacity: 2
     privateNetworking: true
-  - name: nexus-node-group
+  - name: nexus-public-node-group
     labels: { role: nexus }
     instanceType: t2.medium
     desiredCapacity: 2
-  - name: nexus-node-group
+  - name: nexus-private-node-group
     labels: { role: nexus }
     instanceType: t2.medium
     desiredCapacity: 2
