@@ -24,7 +24,7 @@ nodeGroups:
     labels: { role: jenkins }
     instanceType: t2.medium
     desiredCapacity: 2
-  - name: jenkins-public-node-group
+  - name: jenkins-private-node-group
     labels: { role: jenkins }
     instanceType: t2.medium
     desiredCapacity: 2
