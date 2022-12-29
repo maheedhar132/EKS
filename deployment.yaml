@@ -14,8 +14,6 @@ spec:
       labels:
         tool-name: jenkins
     spec:
-      nodeSelector:
-        tool-name: jenkins
       containers:
         - name: jenkins
           image: jenkins:2.60.3
