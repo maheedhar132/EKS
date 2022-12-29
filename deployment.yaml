@@ -7,8 +7,7 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      tool-name: jenkins
-      role: jenkins 
+      tool-name: jenkins 
   template:
     metadata:
       labels:
