@@ -14,7 +14,7 @@ spec:
         role: jenkins
     spec:
       nodeSelector:
-        eksctl.io/v1alpha2/nodegroup-name: jenkins-public-node-group
+        role: jenkins
       containers:
         - name: jenkins
           image: jenkins:2.60.3
