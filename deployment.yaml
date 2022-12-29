@@ -15,7 +15,7 @@ spec:
         tool-name: jenkins
     spec:
       nodeSelector:
-        tool: mongo
+        tool: jenkins
       containers:
         - name: jenkins
           image: jenkins:2.60.3
