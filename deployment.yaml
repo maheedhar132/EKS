@@ -19,6 +19,13 @@ spec:
           image: jenkins:2.60.3
           ports:
             - containerPort: 8080
-      nodeSelector:
-        role: jenkins
+      affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: role
+                  operator: In
+                  values:
+                  - jenkins           
           
