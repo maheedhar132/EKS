@@ -6,11 +6,10 @@ metadata:
   labels:
     role: jenkins
 spec:
-  containers:
-      containers:
-        - name: jenkins
-          image: jenkins:2.60.3
-          ports:
-            - containerPort: 8080
-      nodeSelector:
-        role: jenkins
+    containers:
+      - name: jenkins
+        image: jenkins:2.60.3
+        ports:
+          - containerPort: 8080
+    nodeSelector:
+      role: jenkins
