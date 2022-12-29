@@ -6,7 +6,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    tool-name: jenkins
+    role: jenkins
   ports:
     - nodePort: 31429
       port: 8080
