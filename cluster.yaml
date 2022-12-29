@@ -1,7 +1,7 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: Devops-Test-2
+  name: Devops-Test-1
   region: ap-south-1
 
 vpc:
@@ -21,20 +21,20 @@ vpc:
 
 nodeGroups:
   - name: jenkins-public-node-group
-    labels: { role: jenkins }
+    tags: { role: "jenkins" }
     instanceType: t2.medium
     desiredCapacity: 2
   - name: jenkins-private-node-group
-    labels: { role: jenkins }
+    tags: { role: "jenkins" }
     instanceType: t2.medium
     desiredCapacity: 2
     privateNetworking: true
   - name: nexus-public-node-group
-    labels: { role: nexus }
+    tags: { role: "nexus" }
     instanceType: t2.medium
     desiredCapacity: 2
   - name: nexus-private-node-group
-    labels: { role: nexus }
+    tags: { role: "nexus" }
     instanceType: t2.medium
     desiredCapacity: 2
     privateNetworking: true
