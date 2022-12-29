@@ -14,18 +14,10 @@ spec:
       labels:
         tool-name: jenkins
     spec:
+      nodeSelector:
+        tool: mongo
       containers:
         - name: jenkins
           image: jenkins:2.60.3
           ports:
             - containerPort: 8080
-      affinity:
-          nodeAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-              nodeSelectorTerms:
-              - matchExpressions:
-                - key: role
-                  operator: In
-                  values:
-                  - jenkins           
-          
