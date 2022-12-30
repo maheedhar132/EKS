@@ -8,17 +8,17 @@ spec:
   selector:
     matchLabels:
       tool-name: nexus
-      role: nexus
   template:
     metadata:
       labels:
         tool-name: nexus
     spec:
+      nodeSelector:
+        role: nexus
       containers:
         - name: nexus3
           image: sonatype/nexus3:latest
           ports:
             - containerPort: 8081
-      nodeSelector:
-        role: nexus
+
           
