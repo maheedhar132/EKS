@@ -21,20 +21,20 @@ vpc:
 
 nodeGroups:
   - name: jenkins-public-node-group
-    tags: { role: "jenkins" }
+    label: { role: "jenkins" }
     instanceType: t2.medium
     desiredCapacity: 2
   - name: jenkins-private-node-group
-    tags: { role: "jenkins" }
+    label: { role: "jenkins" }
     instanceType: t2.medium
     desiredCapacity: 2
     privateNetworking: true
   - name: nexus-public-node-group
-    tags: { role: "nexus" }
+    label: { role: "nexus" }
     instanceType: t2.medium
     desiredCapacity: 2
   - name: nexus-private-node-group
-    tags: { role: "nexus" }
+    label: { role: "nexus" }
     instanceType: t2.medium
     desiredCapacity: 2
     privateNetworking: true

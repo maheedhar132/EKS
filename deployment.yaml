@@ -7,11 +7,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      role: jenkins 
+      app: jenkins
   template:
     metadata:
       labels:
-        role: jenkins
+        app: jenkins
     spec:
       nodeSelector:
         role: jenkins
