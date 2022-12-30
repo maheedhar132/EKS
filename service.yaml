@@ -8,6 +8,5 @@ spec:
   selector:
     role: jenkins
   ports:
-    - nodePort: 31429
-      port: 8080
+    - port: 8080
       targetPort: 8080
