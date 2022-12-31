@@ -4,7 +4,7 @@ metadata:
   name: devops-tools
   namespace: devops
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: jenkins
@@ -14,7 +14,7 @@ spec:
         app: jenkins
     spec:
       nodeSelector:
-        role: jenkins 
+        role: jenkins-public
       containers:
         - name: jenkins
           image: jenkins:2.60.3
