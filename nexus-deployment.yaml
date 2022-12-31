@@ -4,7 +4,7 @@ metadata:
   name: devops-tools-nexus
   namespace: devops
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nexus
@@ -14,7 +14,7 @@ spec:
         app: nexus
     spec:
       nodeSelector:
-        role: nexus
+        role: nexus-public
       containers:
         - name: nexus3
           image: sonatype/nexus3:latest
