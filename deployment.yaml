@@ -14,7 +14,7 @@ spec:
         app: jenkins
     spec:
       nodeSelector:
-        role: jenkins
+        role: jenkins 
       containers:
         - name: jenkins
           image: jenkins:2.60.3

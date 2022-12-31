@@ -3,10 +3,15 @@ kind: Service
 metadata:
   name: jenkins-service
   namespace: devops
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: jenkins
   ports:
     - port: 8080
       targetPort: 8080
+      protocol: TCP
